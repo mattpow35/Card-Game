@@ -51,6 +51,7 @@ class Card
         self.backImage = newImage
     }
     
+    
     /* does the same as the swfit property above that is commented out
     */
     func isUp() -> Bool
