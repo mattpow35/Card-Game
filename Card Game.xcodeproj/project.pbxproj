@@ -119,9 +119,9 @@
 		B88D55931DBFAEA800472E6F /* Card Game */ = {
 			isa = PBXGroup;
 			children = (
+				B88D55A01DBFAEA800472E6F /* Info.plist */,
 				B88D55941DBFAEA800472E6F /* AppDelegate.swift */,
 				B8887E821DC2520D00C04A62 /* VIew */,
-				B88D55A01DBFAEA800472E6F /* Info.plist */,
 				B88D55C81DBFAF4800472E6F /* Model */,
 				B8887E811DC2515E00C04A62 /* Controller */,
 			);
