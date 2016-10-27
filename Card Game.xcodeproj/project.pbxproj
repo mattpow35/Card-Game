@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8887E801DC2515300C04A62 /* CardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8887E7F1DC2515300C04A62 /* CardGameController.swift */; };
 		B88D55951DBFAEA800472E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55941DBFAEA800472E6F /* AppDelegate.swift */; };
-		B88D55971DBFAEA800472E6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55961DBFAEA800472E6F /* ViewController.swift */; };
 		B88D559A1DBFAEA800472E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88D55981DBFAEA800472E6F /* Main.storyboard */; };
 		B88D559C1DBFAEA800472E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B88D559B1DBFAEA800472E6F /* Assets.xcassets */; };
 		B88D559F1DBFAEA800472E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88D559D1DBFAEA800472E6F /* LaunchScreen.storyboard */; };
@@ -36,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8887E7F1DC2515300C04A62 /* CardGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGameController.swift; sourceTree = "<group>"; };
 		B88D55911DBFAEA800472E6F /* Card Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88D55941DBFAEA800472E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B88D55961DBFAEA800472E6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B88D55991DBFAEA800472E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B88D559B1DBFAEA800472E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B88D559E1DBFAEA800472E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8887E811DC2515E00C04A62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8887E7F1DC2515300C04A62 /* CardGameController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B8887E821DC2520D00C04A62 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				B88D55981DBFAEA800472E6F /* Main.storyboard */,
+				B88D559B1DBFAEA800472E6F /* Assets.xcassets */,
+				B88D559D1DBFAEA800472E6F /* LaunchScreen.storyboard */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
 		B88D55881DBFAEA800472E6F = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				B88D55941DBFAEA800472E6F /* AppDelegate.swift */,
-				B88D55961DBFAEA800472E6F /* ViewController.swift */,
-				B88D55981DBFAEA800472E6F /* Main.storyboard */,
-				B88D559B1DBFAEA800472E6F /* Assets.xcassets */,
-				B88D559D1DBFAEA800472E6F /* LaunchScreen.storyboard */,
+				B8887E821DC2520D00C04A62 /* VIew */,
 				B88D55A01DBFAEA800472E6F /* Info.plist */,
 				B88D55C81DBFAF4800472E6F /* Model */,
+				B8887E811DC2515E00C04A62 /* Controller */,
 			);
 			path = "Card Game";
 			sourceTree = "<group>";
@@ -270,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B88D55971DBFAEA800472E6F /* ViewController.swift in Sources */,
+				B8887E801DC2515300C04A62 /* CardGameController.swift in Sources */,
 				B88D55C31DBFAEC700472E6F /* Card.swift in Sources */,
 				B88D55C51DBFAED900472E6F /* PlayingCard.swift in Sources */,
 				B88D55951DBFAEA800472E6F /* AppDelegate.swift in Sources */,
@@ -500,6 +516,7 @@
 				B88D55BB1DBFAEA800472E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B88D55BC1DBFAEA800472E6F /* Build configuration list for PBXNativeTarget "Card GameTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +525,7 @@
 				B88D55BE1DBFAEA800472E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B88D55BF1DBFAEA800472E6F /* Build configuration list for PBXNativeTarget "Card GameUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +534,7 @@
 				B88D55C11DBFAEA800472E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

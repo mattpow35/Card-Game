@@ -61,6 +61,7 @@ class PlayingCard : Card
     override init()
     {
         super.init()
+        
         frontImage = UIImage()
         color = UIColor()
         rank = 0
