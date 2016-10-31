@@ -10,11 +10,11 @@ import UIKit
 
 class Card
 {
-    private var backImage : UIImage
-    private var isFaceUp : Bool
+    internal var backImage : UIImage
+    internal var isFaceUp : Bool
     
-    /* this is the swift way of writing getters and setters. it is called properties and is 
-     * the same as the getter and setter below
+    /* this is the swift way of writing getters and setters. it is called
+     * properties and is the same as the getter and setter below
     */
 //    private var isFaceUp : Bool
 //    {
