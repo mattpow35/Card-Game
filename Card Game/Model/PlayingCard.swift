@@ -105,6 +105,18 @@ class PlayingCard : Card
         self.rank = rank
     }
     
+    //The modifier 'class' in front of the func means that this method is
+    //visibible without creating an instance of the class in question.
+    //This is a class method, not an instance method.
+    class func validRanks() -> [String]
+    {
+        return["??","A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+    }
+    
+    class func validSuits() -> [String]
+    {
+        return ["♥️","♠️","♦️","♣️"]
+    }
     
     
     
