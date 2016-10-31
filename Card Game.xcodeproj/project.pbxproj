@@ -16,6 +16,7 @@
 		B88D55B51DBFAEA800472E6F /* Card_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55B41DBFAEA800472E6F /* Card_GameUITests.swift */; };
 		B88D55C31DBFAEC700472E6F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55C21DBFAEC700472E6F /* Card.swift */; };
 		B88D55C51DBFAED900472E6F /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55C41DBFAED900472E6F /* PlayingCard.swift */; };
+		B89A1A5C1DC7882C000281C7 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A1A5B1DC7882C000281C7 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B88D55B61DBFAEA800472E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B88D55C21DBFAEC700472E6F /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Model/Card.swift; sourceTree = "<group>"; };
 		B88D55C41DBFAED900472E6F /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCard.swift; path = Model/PlayingCard.swift; sourceTree = "<group>"; };
+		B89A1A5B1DC7882C000281C7 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				B88D55C21DBFAEC700472E6F /* Card.swift */,
 				B88D55C41DBFAED900472E6F /* PlayingCard.swift */,
+				B89A1A5B1DC7882C000281C7 /* Deck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				B8887E801DC2515300C04A62 /* CardGameController.swift in Sources */,
 				B88D55C31DBFAEC700472E6F /* Card.swift in Sources */,
+				B89A1A5C1DC7882C000281C7 /* Deck.swift in Sources */,
 				B88D55C51DBFAED900472E6F /* PlayingCard.swift in Sources */,
 				B88D55951DBFAEA800472E6F /* AppDelegate.swift in Sources */,
 			);
