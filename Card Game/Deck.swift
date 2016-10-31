@@ -6,10 +6,9 @@
 //  Copyright © 2016 Powley, Matthew. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Deck : PlayingCard
-
+class Deck
 {
     
     
