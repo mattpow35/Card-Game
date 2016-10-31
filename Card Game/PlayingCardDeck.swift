@@ -14,7 +14,8 @@ class PlayingCardDeck : Deck
     
     override init()
     {
-        
+        var test = PlayingCard()
+        test.suit = "ads"
     }
     
     func shuffleDeck() -> Void

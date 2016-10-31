@@ -10,7 +10,7 @@ import UIKit
 
 class PlayingCard : Card
 {
-    private var rank : Int
+    internal var rank : Int
     {
         get
         {
@@ -22,7 +22,7 @@ class PlayingCard : Card
         }
     }
     
-    private var suit : String
+    internal var suit : String
     {
         get
         {
@@ -34,7 +34,7 @@ class PlayingCard : Card
         }
     }
     
-    private var color : UIColor
+    internal var color : UIColor
     {
         get
         {
@@ -46,7 +46,7 @@ class PlayingCard : Card
         }
     }
     
-    private var frontImage : UIImage
+    internal var frontImage : UIImage
     {
         get
         {
@@ -96,14 +96,14 @@ class PlayingCard : Card
     }
     
     
-    func getRank() -> Int
-    {
-        return self.rank
-    }
-    func setRank(rank : Int)
-    {
-        self.rank = rank
-    }
+//    func getRank() -> Int
+//    {
+//        return self.rank
+//    }
+//    func setRank(rank : Int)
+//    {
+//        self.rank = rank
+//    }
     
     //The modifier 'class' in front of the func means that this method is
     //visibible without creating an instance of the class in question.
