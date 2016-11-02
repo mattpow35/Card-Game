@@ -26,10 +26,16 @@ class Card
         return description
     }
     
-        
     
-    /* does the same as the swfit property above that is commented out
-    */
+    func getBackImage() -> UIImage
+    {
+        return backImage
+    }
+    func setBackImage(newImage : UIImage)
+    {
+        self.backImage = newImage
+    }
+  
     func isUp() -> Bool
     {
         return isFaceUp
