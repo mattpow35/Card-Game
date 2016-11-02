@@ -13,21 +13,6 @@ class Card
     internal var backImage : UIImage
     internal var isFaceUp : Bool
     
-    /* this is the swift way of writing getters and setters. it is called
-     * properties and is the same as the getter and setter below
-    */
-//    private var isFaceUp : Bool
-//    {
-//        get
-//        {
-//            return self.isFaceUp
-//        }
-//        set(isFaceUp)
-//        {
-//            self.isFaceUp = isFaceUp
-//        }
-//    }
-    
     
     init()
     {
@@ -41,16 +26,7 @@ class Card
         return description
     }
     
-    
-    func getBackImage() -> UIImage
-    {
-        return backImage
-    }
-    func setBackImage(newImage : UIImage)
-    {
-        self.backImage = newImage
-    }
-    
+        
     
     /* does the same as the swfit property above that is commented out
     */
