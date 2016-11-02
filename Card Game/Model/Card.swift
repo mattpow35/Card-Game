@@ -35,6 +35,7 @@ class Card
     {
         self.backImage = newImage
     }
+    
   
     func isUp() -> Bool
     {
