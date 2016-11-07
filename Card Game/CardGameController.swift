@@ -10,6 +10,13 @@ import UIKit
 
 class CardGameController : UIViewController
 {
+    
+    @IBOutlet weak var cardButton: UIButton!
+    
+    @IBOutlet weak var cardLabel: UILabel!
+    
+    private lazy var currentDeck = PlayingCardDeck()
+    
     override func viewDidLoad()
     {
         let tempCard = Card()
