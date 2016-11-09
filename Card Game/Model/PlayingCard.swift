@@ -22,7 +22,8 @@ class PlayingCard : Card
         color = UIColor.redColor()
         rank = 0
         suit = String()
-        super.init()    }
+        super.init()
+    }
     
     init(withRank: Int, ofSuit: String)
     {
@@ -58,6 +59,12 @@ class PlayingCard : Card
     func setRank(rank : Int)
     {
         self.rank = rank
+    }
+    
+    func getCardData() -> String
+    {
+        let data = "\(PlayingCard.validRanks()[rank]) \(suit)"
+        return data
     }
     
     //The modifier 'class' in front of the func means that this method is
