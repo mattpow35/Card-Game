@@ -40,6 +40,8 @@ class StupidGame
     //methods
     func startGame() -> Void
     {
+        currentCard1 = deck.drawRandomCard()!
+        
         
         
     }
