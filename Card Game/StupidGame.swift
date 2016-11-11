@@ -11,13 +11,13 @@ import Foundation
 class StupidGame
 {
     //declaration section
-    private var deck : PlayingCardDeck
-    private var currentCard1 : PlayingCard
-    private var currentCard2 : PlayingCard
-    private var currentHand : [PlayingCard]
-    private var discardDeck : [PlayingCard]
-    private var pointDeck : [PlayingCard]
-    private var score : Int
+    internal var deck : PlayingCardDeck
+    internal var currentCard1 : PlayingCard
+    internal var currentCard2 : PlayingCard
+    internal var currentHand : [PlayingCard]
+    internal var discardDeck : [PlayingCard]
+    internal var pointDeck : [PlayingCard]
+    internal var score : Int
     
     
     
@@ -40,7 +40,14 @@ class StupidGame
     //methods
     func startGame() -> Void
     {
-        currentCard1 = deck.drawRandomCard()!
+        deck.shuffleDeck()
+        
+        currentCard1 = (deck.drawRandomCard() as? PlayingCard)!
+        currentCard2 = (deck.drawRandomCard() as? PlayingCard)!
+        
+        currentHand.append(currentCard1)
+        currentHand.append(currentCard2)
+        
         
         
         
