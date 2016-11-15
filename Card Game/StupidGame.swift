@@ -49,7 +49,10 @@ class StupidGame
         currentHand.append(currentCard2)
         
         
-        
-        
+    }
+    
+    func checkMatch(String : [PlayingCard]) -> Void
+    {
+    
     }
 }
