@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B872172F1DE35C2500661A9A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872172E1DE35C2500661A9A /* CardView.swift */; };
 		B8887E801DC2515300C04A62 /* CardGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8887E7F1DC2515300C04A62 /* CardGameController.swift */; };
+		B88AF3A51DD61E08006B498B /* StupidGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88AF3A41DD61E08006B498B /* StupidGame.swift */; };
 		B88D55951DBFAEA800472E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D55941DBFAEA800472E6F /* AppDelegate.swift */; };
 		B88D559A1DBFAEA800472E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88D55981DBFAEA800472E6F /* Main.storyboard */; };
 		B88D559C1DBFAEA800472E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B88D559B1DBFAEA800472E6F /* Assets.xcassets */; };
@@ -38,7 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B872172E1DE35C2500661A9A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = View/CardView.swift; sourceTree = "<group>"; };
 		B8887E7F1DC2515300C04A62 /* CardGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGameController.swift; sourceTree = "<group>"; };
+		B88AF3A41DD61E08006B498B /* StupidGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StupidGame.swift; sourceTree = "<group>"; };
 		B88D55911DBFAEA800472E6F /* Card Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88D55941DBFAEA800472E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B88D55991DBFAEA800472E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				B88D55981DBFAEA800472E6F /* Main.storyboard */,
 				B88D559B1DBFAEA800472E6F /* Assets.xcassets */,
 				B88D559D1DBFAEA800472E6F /* LaunchScreen.storyboard */,
+				B872172E1DE35C2500661A9A /* CardView.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				B88D55C41DBFAED900472E6F /* PlayingCard.swift */,
 				B89A1A5B1DC7882C000281C7 /* Deck.swift */,
 				B89A1A5D1DC78AF6000281C7 /* PlayingCardDeck.swift */,
+				B88AF3A41DD61E08006B498B /* StupidGame.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -296,7 +302,9 @@
 				B88D55C31DBFAEC700472E6F /* Card.swift in Sources */,
 				B89A1A5C1DC7882C000281C7 /* Deck.swift in Sources */,
 				B89A1A5E1DC78AF6000281C7 /* PlayingCardDeck.swift in Sources */,
+				B88AF3A51DD61E08006B498B /* StupidGame.swift in Sources */,
 				B88D55C51DBFAED900472E6F /* PlayingCard.swift in Sources */,
+				B872172F1DE35C2500661A9A /* CardView.swift in Sources */,
 				B88D55951DBFAEA800472E6F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
