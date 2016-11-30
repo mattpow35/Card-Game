@@ -92,7 +92,6 @@ class StupidGame
         {
             label.text = "You have ran out of cards, re-shuffling deck now..."
             
-//            deck = discardDeck
             
 //            while discardDeck.count > 0
 //            {
