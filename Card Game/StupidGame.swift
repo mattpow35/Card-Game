@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class StupidGame
 {
@@ -16,8 +17,9 @@ class StupidGame
     internal var currentCard2 : PlayingCard
     internal var currentHand : [PlayingCard]
     internal var discardDeck : [PlayingCard]
-    internal var pointDeck : [PlayingCard]
+  
     internal var score : Int
+    internal var label : UILabel!
     
     
     
@@ -29,8 +31,9 @@ class StupidGame
         currentCard2 = PlayingCard()
         currentHand = [PlayingCard]()
         discardDeck = [PlayingCard]()
-        pointDeck = [PlayingCard]()
+        
         score = Int()
+        label = UILabel()
 
         
     }
@@ -72,7 +75,7 @@ class StupidGame
     
     func playMatchGame() -> Void
     {
-        if deck.cards.count > 0
+        if deck.cards.count > 1
         {
             if checkMatch()
             {
@@ -84,6 +87,20 @@ class StupidGame
                 score -= 2
                 noMatch()
             }
+        }
+        else
+        {
+            label.text = "You have ran out of cards, re-shuffling deck now..."
+            
+//            deck = discardDeck
+            
+//            while discardDeck.count > 0
+//            {
+//                let 
+//            }
+            
+            
+            
         }
         
     }
