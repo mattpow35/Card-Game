@@ -41,17 +41,19 @@ class StupidGame
     func startGame() -> Void
     {
         deck.shuffleDeck()
-        
+        drawCards()
+    }
+    
+    private func drawCards() -> Void
+    {
         currentCard1 = (deck.drawRandomCard() as? PlayingCard)!
         currentCard2 = (deck.drawRandomCard() as? PlayingCard)!
         
         currentHand.append(currentCard1)
         currentHand.append(currentCard2)
-        
-        
     }
     
-    func checkMatch(String : [PlayingCard]) -> Bool
+    func checkMatch() -> Bool
     {
         let hasMatch :Bool
         
@@ -67,4 +69,51 @@ class StupidGame
         
         return hasMatch
     }
+    
+    func playMatchGame() -> Void
+    {
+        if deck.cards.count > 0
+        {
+            if checkMatch()
+            {
+                score += 5
+                gotMatch()
+            }
+            else
+            {
+                score -= 2
+                noMatch()
+            }
+        }
+        
+    }
+    
+    func gotMatch() -> Void
+    {
+        discardDeck.append(currentCard1)
+        discardDeck.append(currentCard2)
+        currentHand.removeAtIndex(0)
+        currentHand.removeAtIndex(0)
+        drawCards()
+    }
+    
+    func noMatch() -> Void
+    {
+        discardDeck.append(currentHand[1])
+        currentHand.removeAtIndex(1)
+        currentCard2 = (deck.drawRandomCard() as? PlayingCard)!
+        currentHand.insert(currentCard2, atIndex: 1)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
