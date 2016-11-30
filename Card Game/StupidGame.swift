@@ -19,7 +19,8 @@ class StupidGame
     internal var discardDeck : [PlayingCard]
   
     internal var score : Int
-    internal var label : UILabel!
+    internal var reShufflelabel : UILabel!
+    internal var scoreLabel : UILabel!
     
     
     
@@ -33,7 +34,9 @@ class StupidGame
         discardDeck = [PlayingCard]()
         
         score = Int()
-        label = UILabel()
+        reShufflelabel = UILabel()
+        scoreLabel = UILabel()
+        
 
         
     }
@@ -75,6 +78,8 @@ class StupidGame
     
     func playMatchGame() -> Void
     {
+    
+        
         if deck.cards.count > 1
         {
             if checkMatch()
@@ -90,20 +95,16 @@ class StupidGame
         }
         else
         {
-            label.text = "You have ran out of cards, re-shuffling deck now..."
             
-            
-//            while discardDeck.count > 0
-//            {
-//                let 
-//            }
-            
-            
-            
+            reShuffle()
         }
+        
+        scoreLabel.text = "Score: \(score)"
         
     }
     
+    //method used when there is a match
+    //draws 2 new cards and adds the match card to the discard pile
     func gotMatch() -> Void
     {
         discardDeck.append(currentCard1)
@@ -113,6 +114,8 @@ class StupidGame
         drawCards()
     }
     
+    //method used when there is no match
+    //draws one new card and adds one to discard pile
     func noMatch() -> Void
     {
         discardDeck.append(currentHand[1])
@@ -122,14 +125,20 @@ class StupidGame
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // takes the cards from the discard pile and adds them back to the deck
+    func reShuffle() -> Void
+    {
+        reShufflelabel.text = "You have ran out of cards, re-shuffling deck now..."
+        
+        var tempDeck = [PlayingCard]()
+        while discardDeck.count > 0
+        {
+            let removeCard = discardDeck.removeAtIndex(0)
+            
+            tempDeck.append(removeCard)
+            
+        }
+        
+        deck.cards = tempDeck
+    }
 }
