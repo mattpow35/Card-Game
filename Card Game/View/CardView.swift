@@ -29,6 +29,8 @@ class CardView
     
     func setup() -> Void
     {
+        
+        
       
     }
 }

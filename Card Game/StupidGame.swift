@@ -51,8 +51,20 @@ class StupidGame
         
     }
     
-    func checkMatch(String : [PlayingCard]) -> Void
+    func checkMatch(String : [PlayingCard]) -> Bool
     {
-    
+        let hasMatch :Bool
+        
+        if ( currentHand[0].rank == currentHand[1].rank || currentHand[0].suit == currentHand[1].suit)
+        {
+            hasMatch = true
+        }
+        else
+        {
+            hasMatch = false
+        }
+        
+        
+        return hasMatch
     }
 }
