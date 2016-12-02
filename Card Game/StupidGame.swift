@@ -137,5 +137,6 @@ class StupidGame
         }
         
         deck.cards = tempDeck
+        deck.shuffleDeck()
     }
 }
