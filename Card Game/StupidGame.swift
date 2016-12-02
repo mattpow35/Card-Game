@@ -36,9 +36,6 @@ class StupidGame
         score = Int()
         reShufflelabel = UILabel()
         scoreLabel = UILabel()
-        
-
-        
     }
     
     
