@@ -14,7 +14,7 @@ class CardGameController : UIViewController
     @IBOutlet weak var cardButton: UIButton!
     @IBOutlet weak var cardLabel: UILabel!
     
-    
+    private lazy var cardGame = StupidGame()
     private lazy var currentDeck = PlayingCardDeck()
     
     private lazy var clickCount = Int()
