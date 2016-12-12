@@ -19,8 +19,13 @@ class StupidGame
     internal var discardDeck : [PlayingCard]
   
     internal var score : Int
-    internal var reShufflelabel : UILabel!
-    internal var scoreLabel : UILabel!
+    
+    @IBOutlet weak var reShuffleLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var startGame: UIButton!
+    @IBOutlet weak var card1Label: UILabel!
+    @IBOutlet weak var card2Label: UILabel!
     
     
     
@@ -34,17 +39,23 @@ class StupidGame
         discardDeck = [PlayingCard]()
         
         score = Int()
-        reShufflelabel = UILabel()
+        reShuffleLabel = UILabel()
         scoreLabel = UILabel()
     }
     
-    
+    @IBAction func startGame(_ sender: Any)
+    {
+        beginGame()
+        
+    }
+ 
     
     //methods
-    func startGame() -> Void
+    func beginGame() -> Void
     {
-        deck.shuffleDeck()
-        drawCards()
+            scoreLabel.text = "Score: \(score)"
+            deck.shuffleDeck()
+            drawCards()
     }
     
     fileprivate func drawCards() -> Void
@@ -92,7 +103,7 @@ class StupidGame
         }
         else
         {
-            
+            gameLabel.text = "You have finished the game with a score of \(score). To play again press the re-shuffle button."
             reShuffle()
         }
         
@@ -125,18 +136,20 @@ class StupidGame
     // takes the cards from the discard pile and adds them back to the deck
     func reShuffle() -> Void
     {
-        reShufflelabel.text = "You have ran out of cards, re-shuffling deck now..."
+            reShuffleLabel.text = "You have ran out of cards. The game is over. re-shuffling deck now..."
         
-        var tempDeck = [PlayingCard]()
-        while discardDeck.count > 0
-        {
-            let removeCard = discardDeck.remove(at: 0)
+            var tempDeck = [PlayingCard]()
+            while discardDeck.count > 0
+            {
+                let removeCard = discardDeck.remove(at: 0)
             
-            tempDeck.append(removeCard)
+                tempDeck.append(removeCard)
             
-        }
+            }
+            
+            deck.cards = tempDeck
+            deck.shuffleDeck()
         
-        deck.cards = tempDeck
-        deck.shuffleDeck()
+            score = 0
     }
 }
