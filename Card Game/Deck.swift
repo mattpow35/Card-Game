@@ -24,7 +24,7 @@ class Deck
             let randomSpot = Int (arc4random() % UInt32(cards.count))
             //get that card from cards
             //takes the card from that spot from the deck, The deck decreases in count
-            let removeCard = self.cards.removeAtIndex(randomSpot)
+            let removeCard = self.cards.remove(at: randomSpot)
             //put that card in temp
             //add the removed card to the end of the temporary deck.
             tempDeck.append(removeCard)
@@ -43,7 +43,7 @@ class Deck
     {
         if self.cards.count > 0
         {
-            return cards.removeAtIndex(0)
+            return cards.remove(at: 0)
         }
         else
         {
@@ -56,7 +56,7 @@ class Deck
         if cards.count > 0
         {
             let randomIndex = (Int)(arc4random() % (UInt32) (cards.count))
-            return cards.removeAtIndex(randomIndex)
+            return cards.remove(at: randomIndex)
         }
         else
         {

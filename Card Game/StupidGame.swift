@@ -47,7 +47,7 @@ class StupidGame
         drawCards()
     }
     
-    private func drawCards() -> Void
+    fileprivate func drawCards() -> Void
     {
         currentCard1 = (deck.drawRandomCard() as? PlayingCard)!
         currentCard2 = (deck.drawRandomCard() as? PlayingCard)!
@@ -106,8 +106,8 @@ class StupidGame
     {
         discardDeck.append(currentCard1)
         discardDeck.append(currentCard2)
-        currentHand.removeAtIndex(0)
-        currentHand.removeAtIndex(0)
+        currentHand.remove(at: 0)
+        currentHand.remove(at: 0)
         drawCards()
     }
     
@@ -116,9 +116,9 @@ class StupidGame
     func noMatch() -> Void
     {
         discardDeck.append(currentHand[1])
-        currentHand.removeAtIndex(1)
+        currentHand.remove(at: 1)
         currentCard2 = (deck.drawRandomCard() as? PlayingCard)!
-        currentHand.insert(currentCard2, atIndex: 1)
+        currentHand.insert(currentCard2, at: 1)
         
     }
     
@@ -130,7 +130,7 @@ class StupidGame
         var tempDeck = [PlayingCard]()
         while discardDeck.count > 0
         {
-            let removeCard = discardDeck.removeAtIndex(0)
+            let removeCard = discardDeck.remove(at: 0)
             
             tempDeck.append(removeCard)
             

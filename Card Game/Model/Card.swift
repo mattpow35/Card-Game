@@ -33,7 +33,7 @@ class Card
     {
         return isFaceUp
     }
-    func setIsUp(isUp : Bool)
+    func setIsUp(_ isUp : Bool)
     {
         self.isFaceUp = isUp
     }
