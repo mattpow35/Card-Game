@@ -18,11 +18,11 @@ class CardGameController : UIViewController
         
     }
     
-    @IBAction func startGame(_ sender: UIPress)
-    {
-        performSegue(withIdentifier: "StupidGame", sender: UIPress())
-        
-    }
+//    @IBAction func startGame(_ sender: UIPress)
+//    {
+//        performSegue(withIdentifier: "StupidGame", sender: UIPress())
+//
+//    }
     
   
 }
