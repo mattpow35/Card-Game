@@ -10,7 +10,7 @@ import UIKit
 
 class CardGameController : UIViewController
 {
-    @IBOutlet weak var startButton: UIButton!
+ 
     
     
     override func viewDidLoad()
@@ -20,7 +20,7 @@ class CardGameController : UIViewController
     
 //    @IBAction func startGame(_ sender: UIPress)
 //    {
-//        performSegue(withIdentifier: "StupidGame", sender: UIPress())
+//        performSegue(withIdentifier: "StupidGame", sender: <#T##Any?#>)
 //
 //    }
     
