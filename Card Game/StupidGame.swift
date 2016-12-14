@@ -24,9 +24,8 @@ class StupidGame
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var startGame: UIButton!
-    @IBOutlet weak var card1Label: UILabel!
-    @IBOutlet weak var card2Label: UILabel!
-    
+    @IBOutlet weak var card1: UIButton!
+    @IBOutlet weak var card2: UIButton!
     
     
     //inits
@@ -56,6 +55,7 @@ class StupidGame
             scoreLabel.text = "Score: \(score)"
             deck.shuffleDeck()
             drawCards()
+            
     }
     
     fileprivate func drawCards() -> Void
@@ -65,6 +65,9 @@ class StupidGame
         
         currentHand.append(currentCard1)
         currentHand.append(currentCard2)
+        card1.setTitle("\(currentCard1.getCardData())", for: UIControlState())
+        card2.setTitle("\(currentCard2.getCardData())", for: UIControlState())
+        
     }
     
     func checkMatch() -> Bool

@@ -21,38 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZi-NV-4FQ">
-                                <rect key="frame" x="66" y="199" width="242" height="268"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
-                                <state key="normal" title="Button" backgroundImage="cardBack">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cep-Kc-AS7">
+                                <rect key="frame" x="114" y="290" width="147" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="START GAME"/>
                                 <connections>
-                                    <action selector="flipCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zr7-qk-WEA"/>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUh-Ov-fWO"/>
+                                    <segue destination="u8C-9T-6B6" kind="show" id="eyH-oT-sAJ"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="stuff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-2B-9Kl">
-                                <rect key="frame" x="78" y="152" width="219" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-NX-Xw0">
-                                <rect key="frame" x="33" y="568" width="140" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Re-Shuffle"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="bZi-NV-4FQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KxF-92-Mrc"/>
-                            <constraint firstItem="bZi-NV-4FQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8q-Xm-Yuc"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="cardButton" destination="bZi-NV-4FQ" id="B8d-uB-khg"/>
-                        <outlet property="cardLabel" destination="jzC-2B-9Kl" id="Msu-af-6YN"/>
+                        <outlet property="startButton" destination="cep-Kc-AS7" id="yfD-XQ-15N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,26 +82,28 @@
                                     <action selector="startGame:" destination="u8C-9T-6B6" eventType="touchUpInside" id="zqU-2K-rqX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55K-lt-XZ9">
-                                <rect key="frame" x="72" y="323" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2A-kO-RZD">
+                                <rect key="frame" x="30" y="250" width="125" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzv-y6-P3f">
-                                <rect key="frame" x="258" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" backgroundImage="cardFront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ9-6E-itC">
+                                <rect key="frame" x="220" y="250" width="125" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" backgroundImage="cardFront">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="card1Label" destination="55K-lt-XZ9" id="nkb-m7-vWZ"/>
-                        <outlet property="card2Label" destination="uzv-y6-P3f" id="TTd-fF-aCp"/>
+                        <outlet property="card1" destination="c2A-kO-RZD" id="U5w-Uh-jFN"/>
+                        <outlet property="card2" destination="WJ9-6E-itC" id="IOP-Hd-cER"/>
                         <outlet property="gameLabel" destination="81M-Nw-pzg" id="Pq4-bS-2di"/>
                         <outlet property="reShuffleLabel" destination="qYi-9q-DkU" id="gFR-2t-Z2m"/>
                         <outlet property="scoreLabel" destination="YyW-a8-fgF" id="DWg-oU-PYd"/>
@@ -128,10 +112,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDh-QF-aSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.20000000000005" y="122.78860569715144"/>
+            <point key="canvasLocation" x="918" y="123"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cardBack" width="188" height="268"/>
+        <image name="cardFront" width="424" height="600"/>
     </resources>
 </document>

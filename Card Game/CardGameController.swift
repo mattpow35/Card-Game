@@ -10,35 +10,19 @@ import UIKit
 
 class CardGameController : UIViewController
 {
+    @IBOutlet weak var startButton: UIButton!
     
-    @IBOutlet weak var cardButton: UIButton!
-    @IBOutlet weak var cardLabel: UILabel!
-    
-    fileprivate lazy var cardGame = StupidGame()
-    fileprivate lazy var currentDeck = PlayingCardDeck()
-    
-    fileprivate lazy var clickCount = Int()
     
     override func viewDidLoad()
     {
         
     }
     
-    @IBAction func flipCard(_ sender: UIButton)
+    @IBAction func startGame(_ sender: UIPress)
     {
-        clickCount += 1
-        let words = "The random card has been clicked \(clickCount) times"
-        cardLabel.text = words
-        
-        if let currentCard = currentDeck.drawRandomCard() as? PlayingCard
-        {
-            cardButton.setTitle("\(currentCard.getCardData())", for: UIControlState())
-        }
-        else
-        {
-            cardLabel.text = "The deck was exhausted - renitializing"
-            currentDeck = PlayingCardDeck()
-        }
+        performSegue(withIdentifier: "StupidGame", sender: UIPress())
         
     }
+    
+  
 }
